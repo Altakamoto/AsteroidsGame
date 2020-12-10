@@ -42,7 +42,7 @@ public void keyPressed()
     alex.turn(-5);
   else if(key == 'd')
     alex.turn(5);
-  else if(key == 'w') //pushes ship with rockets in direction it is pointing
+  else if(key == 'w') 
     alex.accelerate(0.3);
   else if(key == 'h')
     alex.hyperspace();

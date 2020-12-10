@@ -1,3 +1,4 @@
+ArrayList <Bullet> shots = new ArrayList<Bullet>();
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid>();
 Spaceship alex = new Spaceship();
 Star[] bright = new Star[200];
@@ -22,6 +23,10 @@ public void draw()
   {
     bright[i].show();
   }
+  for(int i = 0; i < shots.size(); i++) {
+    shots.get(i).show();
+    shots.get(i).move();
+  }
   for(int i = 0; i < rocks.size(); i++) {
     rocks.get(i).show();
     rocks.get(i).move();
@@ -41,4 +46,6 @@ public void keyPressed()
     alex.accelerate(0.3);
   else if(key == 'h')
     alex.hyperspace();
+  else if(key == ' ')
+    shots.add(new Bullet(alex));
 }

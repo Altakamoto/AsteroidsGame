@@ -41,6 +41,4 @@ public void keyPressed()
     alex.accelerate(0.3);
   else if(key == 'h')
     alex.hyperspace();
-  else if(key == ' ')
-    shots.add(new Bullet(alex));
 }

@@ -30,9 +30,9 @@ public void draw()
   for(int i = 0; i < rocks.size(); i++) {
     rocks.get(i).show();
     rocks.get(i).move();
-    float d = dist((float)alex.getX(), (float)alex.getY(), (float)rocks.get(i).getMyCenterX(), (float)rocks.get(i).getMyCenterY());
+    /*float d = dist((float)alex.getX(), (float)alex.getY(), (float)rocks.get(i).getMyCenterX(), (float)rocks.get(i).getMyCenterY());
     if(d < 10)
-      rocks.remove(i);
+      rocks.remove(i);*/
   }
     
 }

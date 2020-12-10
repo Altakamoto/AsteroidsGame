@@ -42,5 +42,3 @@ public void keyPressed()
   else if(key == 'h')
     alex.hyperspace();
 }
-  
-

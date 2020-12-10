@@ -31,15 +31,15 @@ class Asteroid extends Floater
     turn(rotSpeed);
     super.move();
   }
-  public double getMyCenterX()
+  public int getMyCenterX()
   {
-    return myCenterX;
+    return (int)myCenterX;
   }
-  public double getMyCenterY()
+  public int getMyCenterY()
   {
-    return myCenterY;
+    return (int)myCenterY;
   }
     
-}
+    
       
       

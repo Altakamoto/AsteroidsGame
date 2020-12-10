@@ -1,3 +1,4 @@
+ArrayList <Asteroid> rocks = new ArrayList <Asteroid>();
 Spaceship alex = new Spaceship();
 Star[] bright = new Star[200];
 public void setup() 
@@ -6,6 +7,10 @@ public void setup()
   for(int i = 0; i < bright.length; i++)
   {
     bright[i] = new Star();
+  }
+  for(int i = 0; i < 5; i++) 
+  {
+    rocks.add(new Asteroid(i));
   }
 }
 public void draw() 
@@ -17,6 +22,14 @@ public void draw()
   {
     bright[i].show();
   }
+  for(int i = 0; i < rocks.size(); i++) {
+    rocks.get(i).show();
+    rocks.get(i).move();
+    float d = dist((float)alex.getX(), (float)alex.getY(), (float)rocks.get(i).getMyCenterX(), (float)rocks.get(i).getMyCenterY());
+    if(d < 10)
+      rocks.remove(i);
+  }
+    
 }
 public void keyPressed()
 {
@@ -29,4 +42,5 @@ public void keyPressed()
   else if(key == 'h')
     alex.hyperspace();
 }
+  
 

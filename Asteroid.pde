@@ -1,7 +1,6 @@
 class Asteroid extends Floater
 {
   protected double rotSpeed;
-  protected int myStrokeColor;
   public Asteroid(int number)
   {
       corners = 6;   

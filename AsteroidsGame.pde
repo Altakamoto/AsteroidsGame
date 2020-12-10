@@ -1,4 +1,3 @@
-ArrayList <Bullet> shots = new ArrayList<Bullet>();
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid>();
 Spaceship alex = new Spaceship();
 Star[] bright = new Star[200];
@@ -23,15 +22,11 @@ public void draw()
   {
     bright[i].show();
   }
-  for(int i = 0; i < shots.size(); i++) {
-    shots.get(i).show();
-    shots.get(i).move();
-  }
   for(int i = 0; i < rocks.size(); i++) {
     rocks.get(i).show();
     rocks.get(i).move();
-    /*float d = dist((float)alex.getX(), (float)alex.getY(), (float)rocks.get(i).getMyCenterX(), (float)rocks.get(i).getMyCenterY());
-    if(d < 10)
+    float d = dist((int)alex.getX(), (int)alex.getY(), (int)rocks.get(i).getMyCenterX(), (intt)rocks.get(i).getMyCenterY());
+    if(d < 15)
       rocks.remove(i);*/
   }
     

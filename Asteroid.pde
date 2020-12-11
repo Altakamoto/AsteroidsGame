@@ -1,6 +1,6 @@
 class Asteroid extends Floater
 {
-  protected double rotSpeed;
+  private double rotSpeed;
   public Asteroid(int number)
   {
       corners = 6;   
@@ -23,10 +23,10 @@ class Asteroid extends Floater
       myCenterY = (int)(Math.random()*500);
       myXspeed = (Math.random() * 2 - 1);
       myYspeed = (Math.random() * 2 - 1);
-      myPointDirection = (int)(Math.random() * 360);
-      rotSpeed = (Math.random() * 6 - 3);
+      myPointDirection = 0;
+      rotSpeed = (Math.random() * 2 - 1);
   }
-  void move()
+  public void move()
   {
     turn(rotSpeed);
     super.move();

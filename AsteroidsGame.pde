@@ -9,7 +9,7 @@ public void setup()
   {
     bright[i] = new Star();
   }
-  for(int i = 0; i < 5; i++) 
+  for(int i = 0; i < 10; i++) 
   {
     rocks.add(new Asteroid(i));
   }
@@ -34,7 +34,13 @@ public void draw()
     if(d < 15)
       rocks.remove(i);
   }
-    
+  for(int i = 0; i < shots.size(); i++) {
+    for(int j = 0; j < rocks.size(); j++) {
+      if(dist(shots.get(i).getMyCenterX(), shots.get(i).getMyCenterY(), rocks.get(j).getMyCenterX(), rocks.get(j).getMyCenterY()) < 15) {
+        rocks.remove(j);
+      }
+    }
+  }
 }
 public void keyPressed()
 {
@@ -49,4 +55,5 @@ public void keyPressed()
   else if(key == ' ')
     shots.add(new Bullet(alex));
 }
+  
   
